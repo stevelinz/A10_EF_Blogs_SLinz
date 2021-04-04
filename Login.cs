@@ -1,9 +1,7 @@
 using System;
-using System.Data;
-using System.Data.SqlClient;
 using System.IO;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Configuration;
+
 
 namespace BlogsConsole
 {
@@ -31,25 +29,9 @@ namespace BlogsConsole
             + "User Id =" + userName + "; Password =" + passWord + ";" + "\"" + "} }";
             File.WriteAllText(path, createConnection);
 
-         //   checkConn();
+         
 
         }
-
-        
-         
-        //  void checkConn()
-        //  {
-        //     SqlConnection conn = 
-        //     new SqlConnection("Server =bitsql.wctc.edu; Database = Blogs_SL_22097;"
-        //     + "User Id =" + userName + "; Password =" + passWord );
-           
-        //         if (conn.State == ConnectionState.Open)
-        //         {
-        //             System.Console.WriteLine("Wrong username and/or password");
-        //             userConnectionString();
-        //         } 
-        //  }
-
         
     }
 }

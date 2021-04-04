@@ -3,9 +3,6 @@ using System.IO;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 
-
-
-
 namespace BlogsConsole
 {
     public class BloggingContext : DbContext
