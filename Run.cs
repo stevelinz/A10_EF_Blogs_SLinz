@@ -41,7 +41,7 @@ namespace BlogsConsole
                     tryAgain:
                     Console.Write("Enter a name for a new Blog: ");
                     var name = Console.ReadLine();
-                    if(name == null) goto tryAgain;
+                    if(String.IsNullOrEmpty(name)) goto tryAgain;
                     var blog = new Blog { Name = name };
                     db.AddBlog(blog);
                     logger.Info("Blog added - {name}", name);
@@ -83,7 +83,7 @@ namespace BlogsConsole
                     oppsNoTitle:
                     Console.Write("Enter a title for the new Post: ");
                     var title = Console.ReadLine();
-                    if(title == null) goto oppsNoTitle;
+                    if(String.IsNullOrEmpty(title)) goto oppsNoTitle;
                     
                     Console.Write("Enter content for the new Post: ");
                     var content = Console.ReadLine();
@@ -133,7 +133,6 @@ namespace BlogsConsole
             if (intTest == false || theBlogIdTest > count || theBlogIdTest == 0)
             {
                 Console.WriteLine("Select the ID number of the Blog you want");
-                System.Console.WriteLine(count + " <<count  blog>> " + blogID);
                 goto andAgain;
             }
             else
