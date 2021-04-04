@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace BlogsConsole
 {
-    public class Login  : DbContext
+    public class Login 
     {
 
         private string userName = "";
